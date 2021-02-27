@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :my_telemetry_api, MyTelemetryApi.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "rp",
+  password: "123456",
   database: "my_telemetry_api_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

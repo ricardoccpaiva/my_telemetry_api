@@ -7,6 +7,8 @@ defmodule MyTelemetryApiWeb.Router do
 
   scope "/api", MyTelemetryApiWeb do
     pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
