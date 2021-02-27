@@ -6,6 +6,10 @@ defmodule MyTelemetryApi.Application do
   use Application
 
   def start(_type, _args) do
+    OpenTelemetry.register_application_tracer(:my_telemetry_api)
+    OpentelemetryPhoenix.setup()
+    OpentelemetryEcto.setup([:my_telemetry_api, :repo])
+
     children = [
       # Start the Ecto repository
       MyTelemetryApi.Repo,
