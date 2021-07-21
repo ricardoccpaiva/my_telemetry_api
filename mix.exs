@@ -42,10 +42,10 @@ defmodule MyTelemetryApi.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:opentelemetry, "~> 0.5.0"},
-      {:opentelemetry_exporter, "~> 0.5.0"},
-      {:opentelemetry_phoenix, " ~> 0.2.0"},
-      {:opentelemetry_ecto, git: "https://github.com/opentelemetry-beam/opentelemetry_ecto"}
+      {:opentelemetry, "~> 1.0.0-rc.2"},
+      {:opentelemetry_exporter, "~> 1.0.0-rc.1"},
+      {:opentelemetry_phoenix, "~> 1.0.0-rc.2"},
+      {:opentelemetry_ecto, "~> 1.0.0-rc.1"}
     ]
   end
 
