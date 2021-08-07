@@ -1,5 +1,6 @@
 defmodule MyTelemetryApiWeb.UserController do
   use MyTelemetryApiWeb, :controller
+  alias MyTelemetryApi.Gateways.Http
 
   alias MyTelemetryApi.Accounts
   alias MyTelemetryApi.Accounts.User
@@ -7,7 +8,11 @@ defmodule MyTelemetryApiWeb.UserController do
   action_fallback MyTelemetryApiWeb.FallbackController
 
   def index(conn, _params) do
+    Http.client()
+    |> Http.get(200)
+
     users = Accounts.list_users()
+
     render(conn, "index.json", users: users)
   end
 
@@ -21,6 +26,9 @@ defmodule MyTelemetryApiWeb.UserController do
   end
 
   def show(conn, %{"id" => id}) do
+    Http.client()
+    |> Http.get(200)
+
     user = Accounts.get_user!(id)
     render(conn, "show.json", user: user)
   end
