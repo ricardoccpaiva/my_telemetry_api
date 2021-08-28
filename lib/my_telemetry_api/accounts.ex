@@ -7,6 +7,7 @@ defmodule MyTelemetryApi.Accounts do
   alias MyTelemetryApi.Repo
 
   alias MyTelemetryApi.Accounts.User
+  use OpenTelemetryDecorator
 
   @doc """
   Returns the list of users.
@@ -17,6 +18,7 @@ defmodule MyTelemetryApi.Accounts do
       [%User{}, ...]
 
   """
+  @decorate trace("accounts.list_users")
   def list_users do
     Repo.all(User)
   end

@@ -48,7 +48,10 @@ defmodule MyTelemetryApi.MixProject do
       {:opentelemetry_ecto, "~> 1.0.0-rc.1"},
       {:opentelemetry_tesla, "~> 0.1.0-rc.1",
        git: "https://github.com/ricardoccpaiva/opentelemetry_tesla.git",
-       branch: "otel-spec-compliance"}
+       branch: "otel-spec-compliance"},
+       {:open_telemetry_decorator, "~> 0.5.3",
+      git: "https://github.com/ricardoccpaiva/open_telemetry_decorator",
+    branch: "update-otel"}
     ]
   end
 
