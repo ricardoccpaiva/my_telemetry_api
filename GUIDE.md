@@ -63,7 +63,11 @@ In case there is the need to instrument specific zones of your code, that's also
 For more options please look at the oficial documentation.
 
 ## What's next?
-At this point, if everything is correctly instaled and configured you should be able to see something on your terminal when you do some requests to your API. Here it is an example.
+At this point, if everything is correctly instaled and configured you should be able to see something on your terminal when you do some requests to your API. 
+
+If you are having some struggle please take a look at this demo repository that I created: https://github.com/ricardoccpaiva/my_telemetry_api
+
+Here it is an example.
 
 ````Elixir
 *SPANS FOR DEBUG*
