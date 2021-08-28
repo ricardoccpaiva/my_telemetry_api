@@ -67,7 +67,7 @@ At this point, if everything is correctly instaled and configured you should be 
 
 If you are having some struggle please take a look at this demo repository that I created: https://github.com/ricardoccpaiva/my_telemetry_api
 
-Here it is an example.
+Here it is an example of what you should see (partially).
 
 ````Elixir
 *SPANS FOR DEBUG*
