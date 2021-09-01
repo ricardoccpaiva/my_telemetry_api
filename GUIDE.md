@@ -1,5 +1,5 @@
 ## What is Telemetry
-Somewhere during the lifetime of an application is inevitable that you'll face some performance issues. When that happens it's better that you have some kind of observability over it, otherwise it will significantly increase the time you'll take to find what's slowing it down. It may sound a bit cliché but it's 100% true that *we can't understand a system if we can't look inside it*.
+Somewhere during the lifetime of an application it's inevitable that it will have some performance issues. When that happens it's better that you have some kind of observability, otherwise it will significantly increase the time you'll take to find what's slowing it down. It may sound a bit cliché but it's 100% true that *we can't understand a system if we can't look inside it*.
 
 This is the moment where **Telemetry** comes into place to make our lives easier. According to the dictionary, it's *the science or process of collecting information about objects that are far away and sending the information somewhere electronically*
 
@@ -19,7 +19,7 @@ The Supervision Tree will look something like this: ![otel_sup](https://dev-to-u
 We also need to add this line to your application `start/2` function 👇
 `OpenTelemetry.register_application_tracer(:my_telemetry_api)`
 
-Next step is to configure our application and with this config block we are telling that our OpenTelemetry spans will be exported to stdout which in fact is not very usefull but don't worry, we'll cover this topic later on.
+Next step is to configure our application . With this block we are telling that our OpenTelemetry spans will be exported to stdout which in fact is not very usefull but don't worry, we'll cover this topic later on.
 
 ````Elixir
 config :opentelemetry, :processors,
@@ -35,7 +35,7 @@ Next we need to start instrumenting our application and we'll cover 3 different 
 - External HTTP requests
 - Custom instrumentation
 
-We are going to use one library for each of these components and they are all very similar both in how you initialize them and how they work internally. They simply attach to Elixir Telemetry events and then act accordingly, i.e, creating OpenTelemetry spans.
+We are going to use one library per component, they are all very similar both in how you initialize them and how they work internally. They simply attach to Elixir Telemetry events and then act accordingly.
 
 ## Phoenix HTTP requests
 For this we'll use [opentelemetry_phoenix](https://github.com/opentelemetry-beam/opentelemetry_phoenix).
@@ -65,7 +65,7 @@ For more options please look at the oficial documentation.
 ## What's next?
 At this point, if everything is correctly instaled and configured you should be able to see something on your terminal when you do some requests to your API. 
 
-If you are having some struggle please take a look at this demo repository that I created: https://github.com/ricardoccpaiva/my_telemetry_api
+If you are having some struggle please take a look at this demo repository that i mentioned at the beginning of this guide.
 
 Here it is an example of what you should see (partially).
 
@@ -77,9 +77,9 @@ Here it is an example of what you should see (partially).
       {instrumentation_library,<<"my_telemetry_api">>,<<"0.1.0">>}}
 ````
 
-You might be wondering.... *so... what's this data useful for?*
+You might be wondering.... *what's this data useful for?*
 
-That's exactly the point, we need to transform this **data** into **information** so that we end with something like this:
+That's exactly the point, we need to transform this **data** into **information**. For this, data needs to be processed and stored somewhere.
 
 ![Screenshot 2021-08-28 at 23.31.33](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qsa5ha6kr6tro30dkckr.png)
 
