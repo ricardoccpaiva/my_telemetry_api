@@ -6,8 +6,8 @@ defmodule MyTelemetryApi.Gateways.Http do
   def client() do
     middleware = [
       {Tesla.Middleware.BaseUrl, "http://localhost:4001/api"},
-      Tesla.Middleware.OpenTelemetry,
       Tesla.Middleware.Telemetry,
+      Tesla.Middleware.OpenTelemetry,
       {Tesla.Middleware.Query, [token: "some-token"]}
     ]
 
