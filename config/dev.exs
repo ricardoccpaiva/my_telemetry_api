@@ -5,7 +5,7 @@ config :my_telemetry_api, MyTelemetryApi.Repo,
   username: "postgres",
   password: "postgres",
   database: "my_telemetry_api_dev",
-  hostname: "docker",
+  hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 

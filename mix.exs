@@ -33,22 +33,21 @@ defmodule MyTelemetryApi.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.5.8"},
-      {:phoenix_ecto, "~> 4.1"},
-      {:ecto_sql, "~> 3.4"},
+      {:phoenix, "~> 1.6"},
+      {:phoenix_ecto, "~> 4.4"},
+      {:ecto_sql, "~> 3.7"},
       {:postgrex, ">= 0.0.0"},
-      {:phoenix_live_dashboard, "~> 0.4"},
-      {:telemetry_metrics, "~> 0.4"},
-      {:telemetry_poller, "~> 0.4"},
-      {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
-      {:opentelemetry, "~> 1.0.0-rc.2"},
-      {:opentelemetry_exporter, "~> 1.0.0-rc.1"},
-      {:opentelemetry_phoenix, "~> 1.0.0-rc.2"},
-      {:opentelemetry_ecto, "~> 1.0.0-rc.1"},
-      {:opentelemetry_tesla, "~> 1.1.0-rc.1"},
-      {:open_telemetry_decorator, "~> 0.5.3",
-       git: "https://github.com/ricardoccpaiva/open_telemetry_decorator", branch: "update-otel"}
+      {:phoenix_live_dashboard, "~> 0.6"},
+      {:telemetry_metrics, "~> 0.6"},
+      {:telemetry_poller, "~> 1.0"},
+      {:jason, "~> 1.2"},
+      {:plug_cowboy, "~> 2.5"},
+      {:opentelemetry, "~> 1.0.0-rc.3"},
+      {:opentelemetry_exporter, "~> 1.0.0-rc.3"},
+      {:opentelemetry_phoenix, "~> 1.0.0-rc.5"},
+      {:opentelemetry_ecto, "~> 1.0.0-rc.3"},
+      {:opentelemetry_tesla, "~> 1.3.2-rc.1"},
+      {:open_telemetry_decorator, "~> 1.0.0-rc.3"}
     ]
   end
 
